@@ -1,0 +1,14 @@
+h1{
+    background-color: blue;
+    text-align: center;
+    color: black;
+}
+
+#FazerCompras{
+    background-color: yellow;
+    color: black;
+    border: 1px;
+    border-radius: 5px;
+    border-color: black;
+    padding: 10px;
+}

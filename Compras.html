@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Compras.css">
+</head>
+<body>
+    <button id="addBuy">+</button>
+<button id="removeBuy">-</button>
+<hr>
+<div id="inputs"></div>
+
+<script>
+    const inputsDiv = document.getElementById('inputs');
+
+    document.getElementById('addBuy').addEventListener('click', function() {
+        const newInput = document.createElement('input');
+        newInput.type = 'text';
+        newInput.placeholder = 'Coloque o que deseja comprar!';
+        inputsDiv.appendChild(newInput);
+    });
+
+    document.getElementById('removeBuy').addEventListener('click', function() {
+        const inputs = inputsDiv.getElementsByTagName('input');
+        if (inputs.length > 0) {
+            inputsDiv.removeChild(inputs[inputs.length - 1]); // Remove o último input
+        }
+    });
+    </script>
+</body>
+</html>
